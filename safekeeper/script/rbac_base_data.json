@@ -1,0 +1,224 @@
+{
+    "roles": [
+        {
+            "name": "Employee",
+            "description": "Employee has basic permissions including view personal tasks end edit them ",
+            "updated_by": null,
+            "id": "1",
+            "client_id": null
+        },
+        {
+            "name": "Employer",
+            "description": "Employer has both basic and advanced permissions and can view all tasks",
+            "updated_by": null,
+            "id": "2",
+            "client_id": null
+        }
+    ],
+    "permissions": [
+        {
+            "description": "view personal tasks",
+            "id": "1",
+            "object_id": "1",
+            "updated_by": null,
+            "name": "view personal tasks",
+            "client_id": null,
+            "action_id": "1"
+        },
+        {
+            "description": "edit basic task info",
+            "id": "2",
+            "object_id": "1",
+            "updated_by": null,
+            "name": "edit basic task info",
+            "client_id": null,
+            "action_id": "2"
+        },
+        {
+            "description": "create a task",
+            "id": "3",
+            "object_id": "1",
+            "updated_by": null,
+            "name": "create a task",
+            "client_id": null,
+            "action_id": "3"
+        },
+        {
+            "description": "delete a task",
+            "id": "4",
+            "object_id": "1",
+            "updated_by": null,
+            "name": "delete a task",
+            "client_id": null,
+            "action_id": "4"
+        },
+        {
+            "description": "advance view permission for Employer",
+            "id": "5",
+            "object_id": "1",
+            "updated_by": null,
+            "name": "view all tasks",
+            "client_id": null,
+            "action_id": "5"
+        }
+    ],
+    "permission_actions": [
+        {
+            "id": "1",
+            "name": "basic_view",
+            "updated_by": null
+        },
+        {
+            "id": "2",
+            "name": "basic_edit",
+            "updated_by": null
+        },
+        {
+            "id": "3",
+            "name": "basic_create",
+            "updated_by": null
+        },
+        {
+            "id": "4",
+            "name": "basic_delete",
+            "updated_by": null
+        },
+        {
+            "id": "5",
+            "name": "advanced_view",
+            "updated_by": null
+        }
+    ],
+    "permission_objects": [
+        {
+            "id": "1",
+            "name": "Task",
+            "updated_by": null
+        }
+    ],
+    "scopes": [
+        {
+            "id": "1",
+            "name": "read:task",
+            "updated_by": null
+        },
+        {
+            "id": "2",
+            "name": "edit:task",
+            "updated_by": null
+        },
+        {
+            "id": "3",
+            "name": "create:task",
+            "updated_by": null
+        },
+        {
+            "id": "4",
+            "name": "delete:task",
+            "updated_by": null
+        },
+        {
+            "id": "5",
+            "name": "su_read:task",
+            "updated_by": null
+        }
+    ],
+    "role_permissions": [
+        {
+            "role_id": "1",
+            "updated_by": null,
+            "permission_id": "2"
+        },
+        {
+            "role_id": "1",
+            "updated_by": null,
+            "permission_id": "1"
+        },
+        {
+            "role_id": "2",
+            "updated_by": null,
+            "permission_id": "1"
+        },
+        {
+            "role_id": "2",
+            "updated_by": null,
+            "permission_id": "2"
+        },
+        {
+            "role_id": "2",
+            "updated_by": null,
+            "permission_id": "3"
+        },
+        {
+            "role_id": "2",
+            "updated_by": null,
+            "permission_id": "4"
+        },
+        {
+            "role_id": "2",
+            "updated_by": null,
+            "permission_id": "5"
+        }
+    ],
+    "permission_scopes": [
+        {
+            "scope_id": "1",
+            "updated_by": null,
+            "permission_id": "1"
+        },
+        {
+            "scope_id": "2",
+            "updated_by": null,
+            "permission_id": "2"
+        },
+        {
+            "scope_id": "3",
+            "updated_by": null,
+            "permission_id": "3"
+        },
+        {
+            "scope_id": "4",
+            "updated_by": null,
+            "permission_id": "4"
+        },
+        {
+            "scope_id": "5",
+            "updated_by": null,
+            "permission_id": "5"
+        }
+    ],
+    "users": [
+        {
+            "email": "kiennt9696@gmail.com",
+            "id": "29028702-87fd-4bc9-8c36-32326225eda2",
+            "firstname": "Nguyen",
+            "active": true,
+            "username": "kiennt96",
+            "password_hash": "scrypt:32768:8:1$tezyg0d7Ut5c3lIo$5e7aa2ab1201262fff8bc4a050fea36489ccffda8b04918dd806ce7d811acac29fba8876853741aa72dd5c1795445f6df7e3394f86c2d49129d8b913020b1a4f",
+            "phone": "0969716530",
+            "lastname": "Kien",
+            "updated_by": null
+        },
+        {
+            "email": "kiennt9797@gmail.com",
+            "id": "a3fc9dff-d6d1-4394-9277-2355df20f6e7",
+            "firstname": "Nguyen",
+            "active": true,
+            "username": "kiennt97",
+            "password_hash": "scrypt:32768:8:1$k5997Nq4AzfTBkbm$3dd426997c3e27e8f67586a1fe06e588528a6d61b80df108562fcbea867abf59f6ea4d63f62b27b11dd73bce8d40d4264e461c9c01e8fed87cd0e75dfced06ac",
+            "phone": "0969716530",
+            "lastname": "Kien",
+            "updated_by": null
+        }
+    ],
+    "user_roles": [
+        {
+            "user_id": "29028702-87fd-4bc9-8c36-32326225eda2",
+            "role_id": "2"
+        },
+        {
+            "user_id": "a3fc9dff-d6d1-4394-9277-2355df20f6e7",
+            "role_id": "1"
+        }
+    ]
+}
