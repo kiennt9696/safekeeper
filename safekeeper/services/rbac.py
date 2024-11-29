@@ -3,7 +3,7 @@ from typing import Optional
 
 from common_utils.token import encode_jwt
 
-from safekeeper.interfaces.repositories.rabc_repository import IRBACRepository
+from safekeeper.interfaces.repositories.rabc import IRBACRepository
 
 
 class RBACService:

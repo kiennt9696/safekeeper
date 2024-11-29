@@ -3,7 +3,7 @@ from typing import Optional
 from sqlalchemy import func
 
 from safekeeper.infras.db.connection import DBConnectionHandler
-from safekeeper.interfaces.repositories.rabc_repository import IRBACRepository
+from safekeeper.interfaces.repositories.rabc import IRBACRepository
 from safekeeper.models import (
     Scope,
     PermissionScope,
