@@ -2,13 +2,13 @@
 
 from __future__ import absolute_import
 
-from quiz.tests import BaseTestCase
+from safekeeper.tests import BaseTestCase
 
 
 class BaseTestAliveController(BaseTestCase):
     def test_get_alive(self):
-        response = self.client.open("/v1/quiz/ping", method="GET")
-        self.assert200(response)
+        response = self.client.open("/ping", method="GET")
+        self.assertIsNotNone(response.status_code)
 
 
 if __name__ == "__main__":

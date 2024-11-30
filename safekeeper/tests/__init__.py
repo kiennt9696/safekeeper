@@ -1,17 +1,21 @@
-import logging
+import unittest
 
-from flask_testing import TestCase
+from flask import Flask
 
-from quiz import init_api
+from safekeeper.controllers.healthz import is_alive
 
 
-class BaseTestCase(TestCase):
-    @staticmethod
-    def create_app():
-        logging.getLogger("connexion.operation").setLevel("ERROR")
-        app = init_api()
-        return app.app
+class BaseTestCase(unittest.TestCase):
+    def setUp(self):
+        # Set up the Flask app for testing
+        self.app = Flask(__name__)
+        self.app.testing = True
+        self.client = self.app.test_client()
 
-    @staticmethod
-    def base_url(url):
-        return f"/v1/basic/{url}"
+        # Register routes for testing with uniquely named view functions
+        def is_alive_view():
+            return is_alive()
+
+        self.app.add_url_rule(
+            "/ping", view_func=is_alive_view, methods=["POST"]
+        )
