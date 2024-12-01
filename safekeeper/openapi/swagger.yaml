@@ -38,7 +38,39 @@ paths:
       responses:
         "200":
           description: is alive
+
+  /permission:
+    options:
+      summary: CORS Preflight
+      description: Handles preflight requests
+      operationId: safekeeper.controllers.preflight.permission_preflight
+      parameters: [ ]
+      responses:
+        "204":
+          description: Preflight successful
+    get:
+      tags:
+        - "access control"
+      summary: "Get permission of current user"
+      operationId: "safekeeper.controllers.access_control.get_permission"
+      security:
+        - jwt: [ ]
+      responses:
+        401:
+          description: "Unauthorized Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseError401"
   /authorize:
+    options:
+      summary: CORS Preflight
+      description: Handles preflight requests
+      operationId: safekeeper.controllers.preflight.authorize_preflight
+      parameters: [ ]
+      responses:
+        "204":
+          description: Preflight successful
     post:
       tags:
         - "access control"

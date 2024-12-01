@@ -54,3 +54,7 @@ class RBACService:
         if self.__have_privilege(current_user, scopes):
             return self.__generate_access_token(scopes, current_user)
         return None
+
+    def get_permissions(self, current_user):
+        role, scopes = self.rbac_repo.get_permissions(current_user.get("sub"))
+        return role, [scope[0] for scope in scopes]

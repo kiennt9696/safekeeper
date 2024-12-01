@@ -16,6 +16,4 @@ class BaseTestCase(unittest.TestCase):
         def is_alive_view():
             return is_alive()
 
-        self.app.add_url_rule(
-            "/ping", view_func=is_alive_view, methods=["POST"]
-        )
+        self.app.add_url_rule("/ping", view_func=is_alive_view, methods=["POST"])

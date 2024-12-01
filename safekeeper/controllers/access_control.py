@@ -24,3 +24,11 @@ def get_access_token(body=None):
         ),
         200,
     )
+
+
+def get_permission():
+    current_user = get_current_user(
+        request.authorization.token, current_app.config.get("PUBLIC_KEY")
+    )
+    role, scopes = rbac_service.get_permissions(current_user)
+    return jsonify({"role": role, "scopes": scopes})
