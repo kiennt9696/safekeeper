@@ -36,4 +36,21 @@ http://localhost:5001/v1/swagger.json
 http://localhost:5001/v1/ping
 ```
 
+## Run app
+```html
+python -m safekeeper
+```
+
 ## Launch tests
+```html
+python -m pytest -sv --cov-report xml:test_coverage/coverage.xml  --cov-report term-missing --cov=safekeeper safekeeper/tests
+```
+
+## Build image
+```shell
+docker image build --network=host --build-arg http_proxy=$(PROXY) --build-arg https_proxy=$(PROXY) --build-arg NO_PROXY=127.0.0.1 -t safekeeper:1.0.0 .
+```
+### Deploy
+```shell
+docker-compose up -d
+```
